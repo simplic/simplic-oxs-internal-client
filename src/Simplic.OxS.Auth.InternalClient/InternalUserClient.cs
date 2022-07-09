@@ -15,7 +15,7 @@ namespace Simplic.OxS.Auth.InternalClient
             this.logger = logger;
         }
 
-        internal async Task<Model.RequestUserResponse?> GetUserByEmail(string email)
+        public async Task<Model.RequestUserResponse?> GetUserByEmail(string email)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace Simplic.OxS.Auth.InternalClient
             }
         }
 
-        internal async Task<Model.RequestUserResponse?> GetUserById(Guid id)
+        public async Task<Model.RequestUserResponse?> GetUserById(Guid id)
         {
             try
             {

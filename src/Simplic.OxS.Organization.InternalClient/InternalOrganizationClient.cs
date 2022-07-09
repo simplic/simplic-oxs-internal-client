@@ -15,16 +15,16 @@ namespace Simplic.OxS.Organization.InternalClient
             this.logger = logger;
         }
 
-        internal async Task<IList<Model.InternalOrganizationModel>?> GetForCurrentUser()
+        public async Task<IList<Model.OrganizationMemberModel>?> GetForCurrentUser()
         {
             try
             {
-                return await Get<IList<Model.InternalOrganizationModel>?>("organization", "InternalOrganization", "get-all");
+                return await Get<IList<Model.OrganizationMemberModel>?>("organization", "InternalOrganization", "get-all");
             }
             catch (Exception ex)
             {
                 logger.LogError("Could make internal organization call InternalOrganizationClient.GetForCurrentUser", ex);
-                return new List<Model.InternalOrganizationModel>();
+                return new List<Model.OrganizationMemberModel>();
             }
         }
     }
