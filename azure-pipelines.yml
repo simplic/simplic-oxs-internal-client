@@ -1,0 +1,88 @@
+trigger:
+  branches:
+    include:
+      - master
+      - dev
+  paths:
+    include:
+      - src/*
+      - test/*
+      - azure-pipelines.yml
+
+pr:
+  branches:
+    include:
+      - "*"
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+- group: simplic-deployment
+- group: simplic-deployment-dev02
+- name: buildConfiguration
+  value: "Release"
+- name: dotNetVersion
+  value: '6.0.x'
+
+resources:
+  repositories:
+    - repository: infrastructure
+      type: github
+      name: simplic/build-infrastructure
+      endpoint: simplic-bot
+      
+steps:
+  - task: UseDotNet@2
+    inputs:
+      version: $(dotNetVersion)
+      includePreviewVersions: true
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore solution'
+    inputs:
+      command: 'restore'
+      projects: '**/*.sln'
+      feedsToUse: 'select'
+      vstsFeed: 'f7087ef5-bf6f-48b2-8b8b-5e513f4a7a9e'
+
+  - ${{ if not(eq(variables['Build.Reason'], 'PullRequest')) }}:
+      - template: version-number-update-token-template.yml@infrastructure
+        parameters:
+          connection_string: $(connection_string)
+          git_user: $(git_user)
+          git_token: $(git_token)
+          branch_name: ${{ replace(variables['Build.SourceBranch'], 'refs/heads/', '') }}
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build solution'
+    inputs:
+      command: 'build'
+      projects: '**/*.sln'
+      arguments: '--configuration $(buildConfiguration)'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Execute and publish tests'
+    inputs:
+      command: 'test'
+      projects: '**/*.sln'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Create nuget packages'
+    inputs:
+      command: 'pack'
+      packagesToPack: '**/*.sln'
+      configuration: '$(buildConfiguration)'
+      nobuild: true
+      versioningScheme: 'off'
+      packDirectory: '$(Build.ArtifactStagingDirectory)'
+
+  - task: NuGetCommand@2
+    displayName: 'Publish nuget packages'
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+    inputs:
+      command: 'push'
+      packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+      nuGetFeedType: 'internal'
+      publishVstsFeed: 'f7087ef5-bf6f-48b2-8b8b-5e513f4a7a9e'
+      allowPackageConflicts: true
