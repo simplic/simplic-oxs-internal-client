@@ -1,4 +1,4 @@
-﻿namespace Simplic.OxS.Auth.InternalClient.Model
+﻿namespace Simplic.OxS.Organization.InternalClient.Model
 {
     internal class InternalOrganizationModel
     {

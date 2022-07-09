@@ -4,7 +4,7 @@ using Microsoft.Extensions.Options;
 using Simplic.OxS.InternalClient;
 using Simplic.OxS.Settings;
 
-namespace Simplic.OxS.Auth.InternalClient
+namespace Simplic.OxS.Organization.InternalClient
 {
     public class InternalOrganizationClient : InternalClientBase
     {
