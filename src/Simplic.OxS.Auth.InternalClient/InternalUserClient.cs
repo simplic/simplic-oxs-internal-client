@@ -37,7 +37,7 @@ namespace Simplic.OxS.Auth.InternalClient
             {
                 return await Get<Model.RequestUserResponse?>("auth", "InternalUser", "get-by-id", new Dictionary<string, string>
                 {
-                    { "email", id.ToString() }
+                    { "id", id.ToString() }
                 });
             }
             catch (Exception ex)
