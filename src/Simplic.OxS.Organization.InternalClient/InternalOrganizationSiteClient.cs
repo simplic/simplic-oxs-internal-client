@@ -40,8 +40,11 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex);
+                Console.WriteLine(ex.Message);
+
                 logger.LogError("Could make internal organization call InternalOrganizationClient.GetAllByOrganization", ex);
-                return new List<Model.OrganizationSiteInternalModel>();
+                throw;
             }
         }
     }
