@@ -29,15 +29,18 @@ namespace Simplic.OxS.Organization.InternalClient
             }
         }
 
-        public async Task<IList<Model.OrganizationSiteInternalModel>?> GetAll()
+        public async Task<IList<Model.OrganizationSiteInternalModel>?> GetAllByOrganization(Guid organizationId)
         {
             try
             {
-                return await Get<IList<Model.OrganizationSiteInternalModel>?>("organization", "InternalOrganizationSite", "get-all");
+                return await Get<IList<Model.OrganizationSiteInternalModel>?>("organization", "InternalOrganizationSite", "get-all-by-organization", new Dictionary<string, string> 
+                {
+                    { "id", organizationId.ToString() }
+                });
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal organization call InternalOrganizationClient.GetAll", ex);
+                logger.LogError("Could make internal organization call InternalOrganizationClient.GetAllByOrganization", ex);
                 return new List<Model.OrganizationSiteInternalModel>();
             }
         }
