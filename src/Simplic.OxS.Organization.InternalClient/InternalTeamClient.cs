@@ -25,7 +25,7 @@ namespace Simplic.OxS.Organization.InternalClient
         {
             try
             {
-                return await Get<TeamInternalModel?>("organization", "Team", $"{id}");
+                return await Get<TeamInternalModel?>("organization", "InternalTeam", $"{id}");
             }
             catch (Exception ex)
             {
@@ -39,7 +39,7 @@ namespace Simplic.OxS.Organization.InternalClient
         {
             try
             {
-                return await Get<IList<TeamInternalModel>?>("organization", "Team", "get-all-by-userid", new Dictionary<string, string>
+                return await Get<IList<TeamInternalModel>?>("organization", "InternalTeam", "get-all-by-userid", new Dictionary<string, string>
                 {
                     { "id", id.ToString() }
                 });
