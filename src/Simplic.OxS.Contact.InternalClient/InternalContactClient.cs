@@ -34,7 +34,6 @@ namespace Simplic.OxS.Organization.InternalClient
         {
             try
             {
-
                 return await Get<ContactInternalModel?>("contact", "InternalContact", "get-by-id",
                     new Dictionary<string, string>
                     {
