@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simplic.OxS.Auth.InternalCl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simplic.OxS.Organization.InternalClient", "Simplic.OxS.Organization.InternalClient\Simplic.OxS.Organization.InternalClient.csproj", "{1CD79D7F-507E-4430-8BE5-5DF4EFC78E2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.OxS.Contact.InternalClient", "Simplic.OxS.Contact.InternalClient\Simplic.OxS.Contact.InternalClient.csproj", "{C866DF5A-FAC4-44FC-BB08-47DDA8A37982}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{1CD79D7F-507E-4430-8BE5-5DF4EFC78E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CD79D7F-507E-4430-8BE5-5DF4EFC78E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CD79D7F-507E-4430-8BE5-5DF4EFC78E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C866DF5A-FAC4-44FC-BB08-47DDA8A37982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C866DF5A-FAC4-44FC-BB08-47DDA8A37982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C866DF5A-FAC4-44FC-BB08-47DDA8A37982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C866DF5A-FAC4-44FC-BB08-47DDA8A37982}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
