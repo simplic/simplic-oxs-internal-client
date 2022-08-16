@@ -21,7 +21,7 @@ namespace Simplic.OxS.Organization.InternalClient
             this.logger = logger;
         }
 
-        public async Task<TeamInternalModel?> GetByUserId(Guid id)
+        public async Task<TeamInternalModel?> GetByGuid(Guid id)
         {
             try
             {
