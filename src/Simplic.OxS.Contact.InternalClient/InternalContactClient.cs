@@ -5,7 +5,7 @@ using Simplic.OxS.Contact.InternalClient.Model;
 using Simplic.OxS.InternalClient;
 using Simplic.OxS.Settings;
 
-namespace Simplic.OxS.Organization.InternalClient
+namespace Simplic.OxS.Contact.InternalClient
 {
     /// <summary>
     /// Internal client to interact with the contact api.
