@@ -14,5 +14,10 @@
         /// Gets or sets the mail address for the request user
         /// </summary>
         public string? EMail { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name for the requested user.
+        /// </summary>
+        public string? UserName { get; set; }
     }
 }
