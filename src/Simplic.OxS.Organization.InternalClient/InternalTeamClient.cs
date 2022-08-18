@@ -39,7 +39,7 @@ namespace Simplic.OxS.Organization.InternalClient
         {
             try
             {
-                return await Get<IList<TeamInternalModel>?>("organization", "InternalTeam", "get-all-by-userid", new Dictionary<string, string>
+                return await Get<IList<TeamInternalModel>?>("organization", "InternalTeam", "get-all-by-user", new Dictionary<string, string>
                 {
                     { "id", id.ToString() }
                 });
