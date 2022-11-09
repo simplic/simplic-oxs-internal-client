@@ -43,6 +43,10 @@ namespace Simplic.OxS.Contact.InternalClient
             catch (Exception ex)
             {
                 logger.LogError("Could make internal contact call InternalContactClient.GetById", ex);
+                
+                if (ex.InnerException != null)
+                    logger.LogError("Could make internal contact call InternalContactClient.GetById [InnerException]", ex.InnerException);
+                
                 throw;
             }
         }
