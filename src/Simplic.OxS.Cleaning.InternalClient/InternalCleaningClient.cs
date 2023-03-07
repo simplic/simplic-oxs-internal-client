@@ -33,7 +33,7 @@ namespace Simplic.OxS.Cleaning.InternalClient
         {
             try
             {
-                return await Get<InternalCleaningModel?>("cleaning", "InternalCleaningClient", "get-by-id",
+                return await Get<InternalCleaningModel?>("cleaning", "InternalCleaning", "get-by-id",
                     new Dictionary<string, string>
                     {
                         { "id", $"{id}" }
