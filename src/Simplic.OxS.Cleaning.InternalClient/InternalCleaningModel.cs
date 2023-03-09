@@ -20,16 +20,6 @@
         /// <summary>
         /// Gets or sets the cleaning numbner.
         /// </summary>
-        public string CleaningNumber { get; set; }
-
-        /// <summary>
-        /// Gets or sets the pre product.
-        /// </summary>
-        public string PreProduct { get; set; }
-
-        /// <summary>
-        /// Gets or sets the cleaning procedure.
-        /// </summary>
-        public string CleaningProcedure { get; set; }
+        public string Number { get; set; }
     }
 }
