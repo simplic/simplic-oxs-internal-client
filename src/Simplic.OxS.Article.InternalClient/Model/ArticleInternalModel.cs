@@ -33,7 +33,7 @@
         /// <summary>
         /// Gets or sets the number.
         /// </summary>
-        public int Number { get; set; }
+        public string Number { get; set; }
 
         /// <summary>
         /// Gets or sets the unique number.
