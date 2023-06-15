@@ -54,5 +54,10 @@
         /// Gets or sets the organization id for the contact.
         /// </summary>
         public Guid OrganizationId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the contact match-code
+        /// </summary>
+        public string? MatchCode { get; set; }
     }
 }
