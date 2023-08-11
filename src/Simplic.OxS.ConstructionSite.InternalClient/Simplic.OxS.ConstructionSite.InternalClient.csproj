@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.1.322.710" />
+  </ItemGroup>
+
 </Project>
