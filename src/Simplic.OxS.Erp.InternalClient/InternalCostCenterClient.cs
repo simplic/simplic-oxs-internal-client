@@ -1,22 +1,23 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Simplic.OxS.Erp.InternalClient.Model;
 using Simplic.OxS.InternalClient;
 using Simplic.OxS.Settings;
 
-namespace Simplic.OxS.Cleaning.InternalClient
+namespace Simplic.OxS.Erp.InternalClient
 {
     /// <summary>
-    /// Internal client to interact with the cleaning api.
+    /// Internal client to interact with the internal cost center api.
     /// </summary>
-    public class InternalCleaningClient : InternalClientBase
+    public class InternalCostCenterClient : InternalClientBase
     {
         private readonly ILogger<InternalClientBase> logger;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="InternalCleaningClient"/> with dependency injection.
+        /// Initializes a new instance of <see cref="InternalCostCenterClient"/> with dependency injection.
         /// </summary>
-        public InternalCleaningClient(IOptions<AuthSettings> settings,
+        public InternalCostCenterClient(IOptions<AuthSettings> settings,
                                           IRequestContext requestContext,
                                           ILogger<InternalClientBase> logger,
                                           IConfiguration configuration)
@@ -26,14 +27,14 @@ namespace Simplic.OxS.Cleaning.InternalClient
         }
 
         /// <summary>
-        /// Gets a cleaning by id.
+        /// Gets a cost center by id.
         /// </summary>
-        /// <param name="id">The cleaning id.</param>
-        public async Task<InternalCleaningModel?> Get(Guid id)
+        /// <param name="id">The cost center id.</param>
+        public async Task<CostCenterInternalModel?> Get(Guid id)
         {
             try
             {
-                return await Get<InternalCleaningModel?>("cleaning", "InternalCleaning", "get-by-id",
+                return await Get<CostCenterInternalModel?>("erp", "InternalCostCenter", "get-by-id",
                     new Dictionary<string, string>
                     {
                         { "id", $"{id}" }
@@ -41,14 +42,7 @@ namespace Simplic.OxS.Cleaning.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Could make internal cleaning call InternalCleaningClient.GetById");
-
-                var iex = ex;
-                while (iex.InnerException != null)
-                {
-                    logger.LogError(ex, "Could make internal cleaning call InternalCleaningClient.GetById [InnerException]");
-                    iex = iex.InnerException;
-                }
+                logger.LogError("Could make internal cost center call InternalCostCenterClient.GetById", ex);
                 throw;
             }
         }

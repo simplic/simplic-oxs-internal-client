@@ -1,9 +1,9 @@
-﻿namespace Simplic.OxS.Article.InternalClient.Model
+﻿namespace Simplic.OxS.Erp.InternalClient.Model
 {
     /// <summary>
-    /// Represents the internal model of an article.
+    /// Represents the internal model of a cost center.
     /// </summary>
-    public class ArticleInternalModel
+    public class CostCenterInternalModel
     {
         /// <summary>
         /// Gets or sets the id.
@@ -16,42 +16,24 @@
         public Guid OrganizationId { get; set; }
 
         /// <summary>
-        /// Gets or sets the short name.
+        /// Gets or sets the name of the cost center.
         /// </summary>
-        public string? ShortName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the full name.
+        /// Gets or sets the unique number of the cost center.
         /// </summary>
-        public string? FullName { get; set; }
+        public int Number { get; set; }
 
         /// <summary>
-        /// Gets or sets the description.
+        /// Gets or sets the valid from date
         /// </summary>
-        public string? Description { get; set; }
+        public DateTime ValidFrom { get; set; }
 
         /// <summary>
-        /// Gets or sets the number.
+        /// Gets or sets the valid to date
         /// </summary>
-        public string Number { get; set; }
-
-        /// <summary>
-        /// Gets or sets the unique number.
-        /// </summary>
-        public int UniqueNumber { get; set; }
-
-        /// <summary>
-        /// Gets or sets the ean.
-        /// <para>
-        /// EAN is short for european article number.
-        /// </para>
-        /// </summary>
-        public string EAN { get; set; }
-
-        /// <summary>
-        /// Gets or sets the article group.
-        /// </summary>
-        public ArticleGroupInternalModel ArticleGroup { get; set; }
+        public DateTime? ValidTo { get; set; }
 
         /// <summary>
         /// Gets or sets the create date time.
@@ -79,14 +61,13 @@
         public Guid? UpdateUserId { get; set; }
 
         /// <summary>
-        /// Gets or sets the update user name.
+        /// Gets or sets the udate user name.
         /// </summary>
         public string UpdateUserName { get; set; }
 
         /// <summary>
-        /// Gets or sets whether the article is deleted.
+        /// Gets or sets whether the cost center is deleted.
         /// </summary>
         public bool IsDeleted { get; set; }
-
     }
 }
