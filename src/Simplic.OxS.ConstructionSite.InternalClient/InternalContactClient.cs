@@ -10,14 +10,14 @@ namespace Simplic.OxS.ConstructionSite.InternalClient
     /// <summary>
     /// Internal client to interact with the contact api.
     /// </summary>
-    public class InternalInternalConstructionSiteClient : InternalClientBase
+    public class InternalConstructionSiteClient : InternalClientBase
     {
         private readonly ILogger<InternalClientBase> logger;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="InternalInternalConstructionSiteClient"/> with dependency injection.
+        /// Initializes a new instance of <see cref="InternalConstructionSiteClient"/> with dependency injection.
         /// </summary>
-        public InternalInternalConstructionSiteClient(IOptions<AuthSettings> settings,
+        public InternalConstructionSiteClient(IOptions<AuthSettings> settings,
                                           IRequestContext requestContext,
                                           ILogger<InternalClientBase> logger,
                                           IConfiguration configuration)
