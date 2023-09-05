@@ -34,7 +34,7 @@ namespace Simplic.OxS.ConstructionSite.InternalClient
         {
             try
             {
-                return await Get<ConstructionSiteInternalModel?>("Construction-Site", "InternalConstructionSite", "get-by-id",
+                return await Get<ConstructionSiteInternalModel?>("construction-site", "InternalConstructionSite", "get-by-id",
                     new Dictionary<string, string>
                     {
                         { "id", $"{id}" }
