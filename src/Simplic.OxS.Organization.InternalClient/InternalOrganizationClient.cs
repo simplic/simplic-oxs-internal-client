@@ -27,5 +27,19 @@ namespace Simplic.OxS.Organization.InternalClient
                 return new List<Model.OrganizationMemberModel>();
             }
         }
+
+        public async Task<IList<Model.OrganizationMemberModel>?> GetUsersForOrganization()
+        {
+            try
+            {
+                return await Get<IList<Model.OrganizationMemberModel>?>("organization", "InternalOrganization", "get-users");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Could not make internal organization call " +
+                    "InternalOrganizationCLient.GetUsersForOrganization", ex);
+                return new List<Model.OrganizationMemberModel>();
+            }
+        }
     }
 }
