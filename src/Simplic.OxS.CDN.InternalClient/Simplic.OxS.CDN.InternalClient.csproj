@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.1.923.1024" />
+    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.1.1024.304" />
   </ItemGroup>
 
 </Project>
