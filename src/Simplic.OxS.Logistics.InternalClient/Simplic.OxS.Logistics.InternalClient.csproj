@@ -1,13 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>1.0.24.305</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.1.1024.304" />
+    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.2.124.305" />
   </ItemGroup>
 
 </Project>
