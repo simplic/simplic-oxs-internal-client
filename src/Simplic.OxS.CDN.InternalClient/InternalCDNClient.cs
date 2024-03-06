@@ -33,12 +33,7 @@ public class InternalCDNClient : InternalClientBase
     {
         try
         {
-            return await Get<GetFileResponse>(
-                "cdn",
-                "InternalCDN",
-                "get-file",
-                new Dictionary<string, string> { { "blobId", $"{blobId}" } }
-            );
+            return await Get<GetFileResponse>("cdn", "InternalCDN", $"get-file/{blobId}");
         }
         catch (Exception ex)
         {
