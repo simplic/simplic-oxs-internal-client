@@ -29,11 +29,11 @@ public class InternalCDNClient : InternalClientBase
     /// </summary>
     /// <param name="blobId">Id of the file</param>
     /// <returns>Response containing the file stream and additional info</returns>
-    public async Task<GetFileResponse?> GetFile(Guid blobId)
+    public async Task<StreamResult?> GetFile(Guid blobId)
     {
         try
         {
-            return await Get<GetFileResponse>("cdn", "InternalCDN", $"get-file/{blobId}");
+            return await GetStream("cdn", "InternalCDN", $"get-file/{blobId}");
         }
         catch (Exception ex)
         {

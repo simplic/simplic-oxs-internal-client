@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.2.124.305" />
+    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.2.224.306" />
   </ItemGroup>
 
 </Project>
