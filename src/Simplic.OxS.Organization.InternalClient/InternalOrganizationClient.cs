@@ -28,7 +28,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
         }
 
-        public async Task<Model.OrganizationModel> GetCurrent()
+        public async Task<Model.OrganizationModel?> GetCurrent()
         {
             try
             {
@@ -36,7 +36,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal organization call InternalOrganizationClient.GetCurrent", ex);
+                logger.LogError(ex, $"Could make internal organization call InternalOrganizationClient.GetCurrent.");
                 return null;
             }
         }
