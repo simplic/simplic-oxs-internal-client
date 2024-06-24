@@ -28,6 +28,19 @@ namespace Simplic.OxS.Organization.InternalClient
             }
         }
 
+        public async Task<Model.OrganizationModel> GetCurrent()
+        {
+            try
+            {
+                return await Get<Model.OrganizationModel>("organization", "InternalOrganization", "get-current");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Could make internal organization call InternalOrganizationClient.GetCurrent", ex);
+                return null;
+            }
+        }
+
         public async Task<IList<Model.OrganizationMemberModel>?> GetUsersForOrganization()
         {
             try
