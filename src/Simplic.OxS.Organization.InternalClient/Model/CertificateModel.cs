@@ -80,5 +80,15 @@ namespace Simplic.OxS.Organization.InternalClient.Model
         /// Gets or sets the update username
         /// </summary>
         public string UpdateUserName { get; set; }
+
+        /// <summary>
+        /// Gets or sets an optional pfx file
+        /// </summary>]
+        public byte[]? PfxFile { get; set; }
+
+        /// <summary>
+        /// Gets or sets the pfx password
+        /// </summary>]
+        public string? PfxPassword { get; set; }
     }
 }
