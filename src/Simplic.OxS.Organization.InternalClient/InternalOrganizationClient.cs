@@ -64,7 +64,7 @@ namespace Simplic.OxS.Organization.InternalClient
             catch (Exception ex)
             {
                 logger.LogError(ex,"Could not make internal organization call " +
-                    "IntenralOrganizarionClient.GetAllOrganizationIds");
+                    "InternalOrganizationClient.GetAllOrganizationIds");
                 return new List<Guid>();
             }
         }
