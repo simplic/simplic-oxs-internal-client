@@ -23,7 +23,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal organization call InternalOrganizationClient.GetForCurrentUser", ex);
+                logger.LogError(ex, "Could make internal organization call InternalOrganizationClient.GetForCurrentUser");
                 return new List<Model.OrganizationMemberModel>();
             }
         }
@@ -49,9 +49,23 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could not make internal organization call " +
-                    "InternalOrganizationCLient.GetUsersForOrganization", ex);
+                logger.LogError(ex, "Could not make internal organization call " +
+                    "InternalOrganizationCLient.GetUsersForOrganization");
                 return new List<Model.OrganizationMemberModel>();
+            }
+        }
+
+        public async Task<IList<Guid>?> GetAllOrganizationIds()
+        {
+            try
+            {
+                return await Get<IList<Guid>>("organization", "InternalOrganization", "get-all-ids");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex,"Could not make internal organization call " +
+                    "InternalOrganizationClient.GetAllOrganizationIds");
+                return new List<Guid>();
             }
         }
     }
