@@ -23,5 +23,5 @@ public class ValidateApiKeyResponse
     /// <summary>
     /// Gets or sets when the key expires.
     /// </summary>
-    public DateTime ExpiresAt { get; set; }
+    public DateTime? ExpiresAt { get; set; }
 }
