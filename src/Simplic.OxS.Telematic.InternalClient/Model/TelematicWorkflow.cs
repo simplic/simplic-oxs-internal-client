@@ -1,7 +1,7 @@
 ﻿namespace Simplic.OxS.Telematic.InternalClient.Model;
 
 /// <summary>
-/// Represents the loading aid type internal model.
+/// Represents the telematic workflow internal model.
 /// </summary>
 public class TelematicWorkflow
 {

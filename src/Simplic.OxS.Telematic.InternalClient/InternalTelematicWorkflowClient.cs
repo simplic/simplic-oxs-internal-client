@@ -8,7 +8,7 @@ using Simplic.OxS.Settings;
 namespace Simplic.OxS.Telematic.InternalClient
 {
     /// <summary>
-    /// Internal client to communicate with the internal loading aid type api.
+    /// Internal client to communicate with the internal telematic workflow api.
     /// </summary>
     public class InternalTelematicWorkflowClient : InternalClientBase
     {
@@ -27,9 +27,9 @@ namespace Simplic.OxS.Telematic.InternalClient
         }
 
         /// <summary>
-        /// Gets an loading aid type by id.
+        /// Gets an telematic workflow by id.
         /// </summary>
-        /// <param name="id">The loading aid type id.</param>
+        /// <param name="id">The telematic workflow id.</param>
         public async Task<TelematicWorkflow?> Get(Guid id)
         {
             try
