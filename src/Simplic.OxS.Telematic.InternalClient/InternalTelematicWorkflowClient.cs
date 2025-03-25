@@ -34,11 +34,11 @@ namespace Simplic.OxS.Telematic.InternalClient
         {
             try
             {
-                return await Get<TelematicWorkflow?>("telematic", "InternalLoadingAidType", id.ToString());
+                return await Get<TelematicWorkflow?>("telematic", "InternalWorkflow", id.ToString());
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Could make internal loading aid type call InternalLoadingAidTypeClient.GetById");
+                logger.LogError(ex, "Could make internal loading aid type call InternalWorkflowClient.GetById");
                 throw;
             }
         }
