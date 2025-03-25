@@ -34,7 +34,7 @@ namespace Simplic.OxS.Telematic.InternalClient
         {
             try
             {
-                return await Get<TelematicWorkflow?>("logistics", "InternalLoadingAidType", id.ToString());
+                return await Get<TelematicWorkflow?>("telematic", "InternalLoadingAidType", id.ToString());
             }
             catch (Exception ex)
             {
