@@ -42,4 +42,26 @@ public class InternalVehicleTypeClient : InternalClientBase
             throw;
         }
     }
+
+    /// <summary>
+    /// Gets a vehicle type by a alias.
+    /// </summary>
+    /// <param name="alias">A alias to find the vehicle type.</param>
+    /// <returns></returns>
+    public async Task<VehicleTypeInternalModel?> GetByAlias(string alias)
+    {
+        try
+        {
+            return await Get<VehicleTypeInternalModel?>("vehicleType", "InternalVehicleType", "get-by-alias",
+                new Dictionary<string, string>
+                {
+                        { "alias", alias }
+                });
+        }
+        catch (Exception ex)
+        {
+            logger.LogError("Internal call failed", ex);
+            throw;
+        }
+    }
 }
