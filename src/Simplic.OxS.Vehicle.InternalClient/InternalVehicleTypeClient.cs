@@ -3,12 +3,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Simplic.OxS.InternalClient;
 using Simplic.OxS.Settings;
-using Simplic.OxS.Vehicle.InternalClient.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Simplic.OxS.Vehicle.InternalClient;
 
