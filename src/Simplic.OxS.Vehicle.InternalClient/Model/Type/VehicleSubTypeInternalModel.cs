@@ -21,7 +21,8 @@ public class VehicleSubTypeInternalModel
     public string DisplayName { get; set; }
 
     /// <summary>
-    /// Gets or sets the alias name from webfleet or others.
+    /// Gets or sets a list of alias names.
+    /// This could be an internal name from a third party system like webfleet.
     /// </summary>
-    public string? Alias { get; set; }
+    public IList<string>? Alias { get; set; }
 }
