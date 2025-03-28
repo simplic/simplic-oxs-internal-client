@@ -25,10 +25,10 @@ public class InternalVehicleTypeClient : InternalClientBase
         try
         {
             return await Get<VehicleTypeInternalModel?>("vehicleType", "InternalVehicleType", "",
-                new Dictionary<string, string>
-                {
-                        { "id", id.ToString() }
-                });
+                    new Dictionary<string, string>
+                    {
+                        { "id", $"{id}" }
+                    });
         }
         catch (Exception ex)
         {
@@ -42,11 +42,11 @@ public class InternalVehicleTypeClient : InternalClientBase
     /// </summary>
     /// <param name="alias">A alias to find the vehicle type.</param>
     /// <returns></returns>
-    public async Task<VehicleTypeInternalModel?> GetByAlias(string alias)
+    public async Task<VehicleTypeGetByAliasInternalModel?> GetByAlias(string alias)
     {
         try
         {
-            return await Get<VehicleTypeInternalModel?>("vehicleType", "InternalVehicleType", "get-by-alias",
+            return await Get<VehicleTypeGetByAliasInternalModel?>("vehicleType", "InternalVehicleType", "get-by-alias",
                 new Dictionary<string, string>
                 {
                         { "alias", alias }
