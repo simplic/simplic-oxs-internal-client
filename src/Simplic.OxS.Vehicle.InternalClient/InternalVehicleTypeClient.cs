@@ -42,11 +42,7 @@ public class InternalVehicleTypeClient : InternalClientBase
     {
         try
         {
-            return await Get<VehicleTypeGetByAliasInternalModel?>("vehicleType", "InternalVehicleType", "get-by-alias",
-                new Dictionary<string, string>
-                {
-                        { "alias", alias }
-                });
+            return await Get<VehicleTypeGetByAliasInternalModel?>("vehicleType", "InternalVehicleType", $"get-by-alias/{alias}");
         }
         catch (Exception ex)
         {
