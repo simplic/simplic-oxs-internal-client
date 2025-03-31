@@ -24,11 +24,7 @@ public class InternalVehicleTypeClient : InternalClientBase
     {
         try
         {
-            return await Get<VehicleTypeInternalModel?>("vehicleType", "InternalVehicleType", "",
-                    new Dictionary<string, string>
-                    {
-                        { "id", $"{id}" }
-                    });
+            return await Get<VehicleTypeInternalModel?>("vehicleType", "InternalVehicleType", id.ToString());
         }
         catch (Exception ex)
         {
