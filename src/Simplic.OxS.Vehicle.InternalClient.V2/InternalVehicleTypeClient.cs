@@ -16,6 +16,11 @@ public class InternalVehicleTypeClient : InternalClientBase
     }
 
     /// <summary>
+    /// Gets the api version.
+    /// </summary>
+    public string ApiVersion => "v2";
+
+    /// <summary>
     /// Gets a vehicle type by id.
     /// </summary>
     /// <param name="id">Vehicle type id</param>
