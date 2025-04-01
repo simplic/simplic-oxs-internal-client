@@ -19,7 +19,7 @@ public class InternalVehicleClient : InternalClientBase
     /// <summary>
     /// Gets the api version.
     /// </summary>
-    public string ApiVersion => "v2";
+    public override string ApiVersion => "v2";
 
     /// <summary>
     /// Gets a vehicle by id.
