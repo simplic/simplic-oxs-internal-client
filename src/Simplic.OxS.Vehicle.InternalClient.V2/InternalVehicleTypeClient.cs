@@ -51,7 +51,7 @@ public class InternalVehicleTypeClient : InternalClientBase
         }
         catch (Exception ex)
         {
-            logger.LogError("Internal call failed", ex);
+            logger.LogError(ex, "Internal call failed");
             throw;
         }
     }
