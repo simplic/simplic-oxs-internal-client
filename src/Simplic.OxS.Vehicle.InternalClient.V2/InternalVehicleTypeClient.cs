@@ -29,7 +29,7 @@ public class InternalVehicleTypeClient : InternalClientBase
     {
         try
         {
-            return await Get<VehicleTypeInternalModel?>("vehicleType", "InternalVehicleType", id.ToString());
+            return await Get<VehicleTypeInternalModel?>("vehicle", "InternalVehicleType", id.ToString());
         }
         catch (Exception ex)
         {
@@ -47,7 +47,7 @@ public class InternalVehicleTypeClient : InternalClientBase
     {
         try
         {
-            return await Get<VehicleTypeGetByAliasInternalModel?>("vehicleType", "InternalVehicleType", $"get-by-alias/{alias}");
+            return await Get<VehicleTypeGetByAliasInternalModel?>("vehicle", "InternalVehicleType", $"get-by-alias/{alias}");
         }
         catch (Exception ex)
         {
