@@ -21,6 +21,11 @@ public class VehicleSubTypeInternalModel
     public string DisplayName { get; set; }
 
     /// <summary>
+    /// Gets or sets the display key.
+    /// </summary>
+    public string DisplayKey { get; set; }
+
+    /// <summary>
     /// Gets or sets a list of alias names.
     /// This could be an internal name from a third party system like webfleet.
     /// </summary>
