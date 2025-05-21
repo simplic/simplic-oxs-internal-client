@@ -22,9 +22,4 @@ public class LoadingSlotInternalModel
     /// </para>
     /// </summary>
     public string Description { get; set; }
-
-    /// <summary>
-    /// Gets or sets the id of the resource this loading slot is assigned to.
-    /// </summary>
-    public Guid ResourceId { get; set; }
 }

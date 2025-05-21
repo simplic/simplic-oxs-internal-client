@@ -14,11 +14,11 @@ public class RegistrationCertificateInternalModel
 
     public string? VehicleIdentificationNumber { get; set; }
 
-    public uint? PermissableTotalWeight { get; set; }
+    public int? PermissableTotalWeight { get; set; }
 
-    public uint? PermissableTotalWeightInRegistrationState { get; set; }
+    public int? PermissableTotalWeightInRegistrationState { get; set; }
 
-    public uint? EmptyWeight { get; set; }
+    public int? EmptyWeight { get; set; }
 
     public DateTime? RegistrationValidityPeriod { get; set; }
 
@@ -30,15 +30,15 @@ public class RegistrationCertificateInternalModel
 
     public byte? AxleAmount { get; set; }
 
-    public uint? PermissableBrakedTrailerLoad { get; set; } //
+    public int? PermissableBrakedTrailerLoad { get; set; } //
 
-    public ushort? PermissableUnbrakedTrailerLoad { get; set; } //
+    public int? PermissableUnbrakedTrailerLoad { get; set; } //
 
-    public uint? Displacement { get; set; }
+    public int? Displacement { get; set; }
 
-    public uint? RatedPower { get; set; }
+    public int? RatedPower { get; set; }
 
-    public uint? RatedRPM { get; set; }
+    public int? RatedRPM { get; set; }
 
     public string? FuelType { get; set; }
 
@@ -46,25 +46,25 @@ public class RegistrationCertificateInternalModel
 
     public string? VehicleColor { get; set; }
 
-    public ushort? SeatsIncludingDriverSeat { get; set; }
+    public int? SeatsIncludingDriverSeat { get; set; }
 
-    public ushort? StandingPlaces { get; set; }
+    public int? StandingPlaces { get; set; }
 
-    public ushort? TopSpeed { get; set; }
+    public int? TopSpeed { get; set; }
 
     public byte? StandingNoise { get; set; }
 
-    public ushort? StandingNoiseRPM { get; set; }
+    public int? StandingNoiseRPM { get; set; }
 
     public byte? DrivingNoise { get; set; }
 
-    public ushort? Emissions { get; set; }
+    public int? Emissions { get; set; }
 
     public string? EGTypeEmissionClass { get; set; }
 
     public string? ManufacturerShortName { get; set; }
 
-    public ushort? ManufacturerCode { get; set; }
+    public int? ManufacturerCode { get; set; }
 
     public string? TypeCodeWithCheckDigit { get; set; }
 
@@ -76,17 +76,17 @@ public class RegistrationCertificateInternalModel
 
     public DateTime? EGTypeApprovalDate { get; set; }
 
-    public uint? PermissableMaximumLoadAxle1 { get; set; }
+    public int? PermissableMaximumLoadAxle1 { get; set; }
 
-    public uint? PermissableMaximumLoadAxle2 { get; set; }
+    public int? PermissableMaximumLoadAxle2 { get; set; }
 
-    public uint? PermissableMaximumLoadAxle3 { get; set; }
+    public int? PermissableMaximumLoadAxle3 { get; set; }
 
-    public uint? PermissableMaximumLoadAxle1InRegistrationState { get; set; }
+    public int? PermissableMaximumLoadAxle1InRegistrationState { get; set; }
 
-    public uint? PermissableMaximumLoadAxle2InRegistrationState { get; set; }
+    public int? PermissableMaximumLoadAxle2InRegistrationState { get; set; }
 
-    public uint? PermissableMaximumLoadAxle3InRegistrationState { get; set; }
+    public int? PermissableMaximumLoadAxle3InRegistrationState { get; set; }
 
     public byte? DriveAxleAmount { get; set; }
 
@@ -94,9 +94,9 @@ public class RegistrationCertificateInternalModel
 
     public string? ColorCode { get; set; }
 
-    public uint? TankerTankCapacity { get; set; }
+    public int? TankerTankCapacity { get; set; }
 
-    public uint? TrailerNoseWeight { get; set; }
+    public int? TrailerNoseWeight { get; set; }
 
     public string? NationalEmissionClass { get; set; }
 
@@ -112,11 +112,11 @@ public class RegistrationCertificateInternalModel
 
     public string? OperatingPermitFeature { get; set; }
 
-    public uint? Length { get; set; }
+    public int? Length { get; set; }
 
-    public uint? Width { get; set; }
+    public int? Width { get; set; }
 
-    public uint? Height { get; set; }
+    public int? Height { get; set; }
 
     public string? OtherNotes { get; set; }
 

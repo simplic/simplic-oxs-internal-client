@@ -21,6 +21,11 @@ public class VehicleTypeInternalModel
     public string DisplayName { get; set; }
 
     /// <summary>
+    /// Gets or sets the display key.
+    /// </summary>
+    public string? DisplayKey { get; set; }
+
+    /// <summary>
     /// Gets or sets the vehicle sub types.
     /// </summary>
     public IList<VehicleSubTypeInternalModel> VehicleSubType { get; set; }

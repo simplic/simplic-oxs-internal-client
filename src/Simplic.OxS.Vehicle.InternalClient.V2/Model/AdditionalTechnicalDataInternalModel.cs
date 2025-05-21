@@ -1,5 +1,8 @@
 ﻿namespace Simplic.OxS.Vehicle.InternalClient.Model;
 
+/// <summary>
+/// Represents the model of additional technical data.
+/// </summary>
 public class AdditionalTechnicalDataInternalModel
 {
     public decimal? EmptyWeight { get; set; }
@@ -12,7 +15,7 @@ public class AdditionalTechnicalDataInternalModel
     /// <summary>
     /// Gets or sets the total tire amount
     /// </summary>
-    public uint? TireAmount { get; set; }
+    public int? TireAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the steering tire size in mm
@@ -71,7 +74,7 @@ public class AdditionalTechnicalDataInternalModel
     /// <summary>
     /// Gets or sets the amount of parking spaces
     /// </summary>
-    public uint? SuperstructureParkingSpaces { get; set; }
+    public int? SuperstructureParkingSpaces { get; set; }
 
     /// <summary>
     /// Gets or sets the volume inside the superstructure in cubic meters
@@ -106,7 +109,7 @@ public class AdditionalTechnicalDataInternalModel
     /// <summary>
     /// Gets or sets the tire amound of the superstructure
     /// </summary>
-    public uint? SuperstructureTireAmount { get; set; }
+    public int? SuperstructureTireAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the size of the tires attached to the normal axis of the superstructure
