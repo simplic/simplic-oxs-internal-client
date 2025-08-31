@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simplic.OxS.Telematic.Inter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.OxS.Vehicle.InternalClient.V2", "Simplic.OxS.Vehicle.InternalClient.V2\Simplic.OxS.Vehicle.InternalClient.V2.csproj", "{88E109EC-B8DB-8E9A-849D-426F2522C9A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.OxS.AI.InternalClient", "Simplic.OxS.AI.InternalClient\Simplic.OxS.AI.InternalClient.csproj", "{534E219A-427D-167C-9550-D87FCE45AE63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,10 @@ Global
 		{88E109EC-B8DB-8E9A-849D-426F2522C9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88E109EC-B8DB-8E9A-849D-426F2522C9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88E109EC-B8DB-8E9A-849D-426F2522C9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534E219A-427D-167C-9550-D87FCE45AE63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534E219A-427D-167C-9550-D87FCE45AE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534E219A-427D-167C-9550-D87FCE45AE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534E219A-427D-167C-9550-D87FCE45AE63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
