@@ -8,5 +8,6 @@
         public string ZipCode { get; set; }
         public string City { get; set; }
         public string CountryIso { get; set; }
+        public string FederalStateIso { get; set; }
     }
 }
