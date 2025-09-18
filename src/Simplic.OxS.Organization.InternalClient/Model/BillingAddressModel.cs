@@ -36,7 +36,7 @@
         public string City { get; set; }
 
         /// <summary>
-        /// Gets or sets the country iso code (e.g. de, fr, en, us, ...(
+        /// Gets or sets the country iso code (e.g. DE, FR, EN, US, ...)
         /// </summary>
         public string CountryIso { get; set; }
 
