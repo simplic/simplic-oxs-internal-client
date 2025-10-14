@@ -4,6 +4,12 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <Version>1.1.125.1014</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.2.325.401" />
+  </ItemGroup>
 
 </Project>
