@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Simplic.OxS.InternalClient;
 using Simplic.OxS.SequenceNumber.InternalClient.Model;
-using Simplic.OxS.Settings;
+using Simplic.OxS.Settings; 
 
 namespace Simplic.OxS.SequenceNumber.InternalClient
 {
