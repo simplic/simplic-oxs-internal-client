@@ -33,7 +33,7 @@ namespace Simplic.OxS.SequenceNumber.InternalClient
                 return await Post<SequenceNumberResultInternalModel, GenerateSequenceNumberInternalRequest>(
                     "sequence-number",
                     "InternalSequenceNumber",
-                    "",
+                    "generate",
                     request);
             }
             catch (Exception ex)
