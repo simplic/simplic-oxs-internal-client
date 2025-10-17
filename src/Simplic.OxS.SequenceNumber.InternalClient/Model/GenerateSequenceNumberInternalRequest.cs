@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Simplic.OxS.SequenceNumber.InternalClient.Model
+﻿namespace Simplic.OxS.SequenceNumber.InternalClient.Model
 {
     /// <summary>
     /// Request model for generating a sequence number
