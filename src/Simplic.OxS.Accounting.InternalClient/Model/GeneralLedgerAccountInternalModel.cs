@@ -6,14 +6,19 @@
     public class GeneralLedgerAccountInternalModel
     {
         /// <summary>
-        /// Gets or sets the account name
+        /// Gets or sets the account name.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the account number
+        /// Gets or sets the account number.
         /// </summary>
         public string Number { get; set; }
+
+        /// <summary>
+        /// Gets or sets the corresponding tax rate by ID.
+        /// </summary>
+        public Guid? TaxRateId { get; set; }
 
         /// <summary>
         /// Gets or sets the id.
