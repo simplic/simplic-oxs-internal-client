@@ -29,7 +29,7 @@ namespace Simplic.OxS.Erp.InternalClient
         /// <summary>
         /// Gets a tax rate by id.
         /// </summary>
-        /// <param name="id">The cost center id.</param>
+        /// <param name="id">The tax rate id.</param>
         public async Task<TaxRateInternalModel?> Get(Guid id)
         {
             try
