@@ -39,7 +39,7 @@ namespace Simplic.OxS.Article.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal article call InternalArticleClient.GetById", ex);
+                logger.LogError("Could not make internal article call InternalArticleClient.GetById", ex);
                 throw;
             }
         }

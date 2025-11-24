@@ -26,7 +26,7 @@ namespace Simplic.OxS.Auth.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal auth/user call InternalUserClient.GetUserByEmail", ex);
+                logger.LogError("Could not make internal auth/user call InternalUserClient.GetUserByEmail", ex);
                 throw;
             }
         }
@@ -42,7 +42,7 @@ namespace Simplic.OxS.Auth.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal auth/user call InternalUserClient.GetUserById", ex);
+                logger.LogError("Could not make internal auth/user call InternalUserClient.GetUserById", ex);
                 throw;
             }
         }

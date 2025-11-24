@@ -29,7 +29,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError($"Could make internal team call InternalTeamClient.Get/{id}", ex);
+                logger.LogError($"Could not make internal team call InternalTeamClient.Get/{id}", ex);
                 return null;
                 
             }
@@ -46,7 +46,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal team call InternalTeamClient.GetAllByUserId", ex);
+                logger.LogError("Could not make internal team call InternalTeamClient.GetAllByUserId", ex);
                 throw;
             }
         }

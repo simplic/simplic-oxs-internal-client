@@ -42,7 +42,7 @@ namespace Simplic.OxS.Logistics.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal loading aid type call InternalLoadingAidTypeClient.GetById", ex);
+                logger.LogError("Could not make internal loading aid type call InternalLoadingAidTypeClient.GetById", ex);
                 throw;
             }
         }

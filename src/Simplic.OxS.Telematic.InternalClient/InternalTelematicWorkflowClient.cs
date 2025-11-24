@@ -38,7 +38,7 @@ namespace Simplic.OxS.Telematic.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Could make internal loading aid type call InternalWorkflowClient.GetById");
+                logger.LogError(ex, "Could not make internal loading aid type call InternalWorkflowClient.GetById");
                 throw;
             }
         }

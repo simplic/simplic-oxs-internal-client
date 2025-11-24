@@ -24,7 +24,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError($"Could make internal organization call InternalOrganizationClient.Get/{id}", ex);
+                logger.LogError($"Could not make internal organization call InternalOrganizationClient.Get/{id}", ex);
                 return null;
             }
         }
@@ -43,7 +43,7 @@ namespace Simplic.OxS.Organization.InternalClient
                 Console.WriteLine(ex);
                 Console.WriteLine(ex.Message);
 
-                logger.LogError("Could make internal organization call InternalOrganizationClient.GetAllByOrganization", ex);
+                logger.LogError("Could not make internal organization call InternalOrganizationClient.GetAllByOrganization", ex);
                 throw;
             }
         }
