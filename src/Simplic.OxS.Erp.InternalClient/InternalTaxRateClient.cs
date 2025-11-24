@@ -34,7 +34,7 @@ namespace Simplic.OxS.Erp.InternalClient
         {
             try
             {
-                return await Get<TaxRateInternalModel?>("erp", "InternalTaxRateClient", "get-by-id",
+                return await Get<TaxRateInternalModel?>("erp", "InternalTaxRate", "get-by-id",
                     new Dictionary<string, string>
                     {
                         { "id", $"{id}" }
