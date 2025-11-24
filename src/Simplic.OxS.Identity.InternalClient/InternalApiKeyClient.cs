@@ -31,7 +31,7 @@ public class InternalApiKeyClient(
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Could make internal identity call InternalApiKeyClient.ValidateKey");
+            logger.LogError(ex, "Could not make internal identity call InternalApiKeyClient.ValidateKey");
             return null;
         }
     }

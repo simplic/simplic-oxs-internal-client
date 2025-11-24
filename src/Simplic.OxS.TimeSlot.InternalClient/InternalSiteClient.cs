@@ -42,12 +42,12 @@ namespace Simplic.OxS.TimeSlot.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Could make internal timeslot call InternalSiteClient.GetById");
+                logger.LogError(ex, "Could not make internal timeslot call InternalSiteClient.GetById");
 
                 var iex = ex;
                 while (iex.InnerException != null)
                 {
-                    logger.LogError(ex, "Could make internal timeslot call InternalSiteClient.GetById [InnerException]");
+                    logger.LogError(ex, "Could not make internal timeslot call InternalSiteClient.GetById [InnerException]");
                     iex = iex.InnerException;
                 }
                 throw;

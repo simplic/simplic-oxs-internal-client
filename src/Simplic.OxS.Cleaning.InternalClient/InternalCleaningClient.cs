@@ -41,12 +41,12 @@ namespace Simplic.OxS.Cleaning.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Could make internal cleaning call InternalCleaningClient.GetById");
+                logger.LogError(ex, "Could not make internal cleaning call InternalCleaningClient.GetById");
 
                 var iex = ex;
                 while (iex.InnerException != null)
                 {
-                    logger.LogError(ex, "Could make internal cleaning call InternalCleaningClient.GetById [InnerException]");
+                    logger.LogError(ex, "Could not make internal cleaning call InternalCleaningClient.GetById [InnerException]");
                     iex = iex.InnerException;
                 }
                 throw;

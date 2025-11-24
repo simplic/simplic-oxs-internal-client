@@ -8,16 +8,16 @@ using Simplic.OxS.Settings;
 namespace Simplic.OxS.Erp.InternalClient
 {
     /// <summary>
-    /// Internal client to interact with the internal personal account api.
+    /// Internal client to interact with the internal tax rate api.
     /// </summary>
-    public class InternalPersonalAccountClient : InternalClientBase
+    public class InternalTaxRateClient : InternalClientBase
     {
         private readonly ILogger<InternalClientBase> logger;
 
         /// <summary>
-        /// Initializes a new instance of <see cref="InternalPersonalAccountClient"/> with dependency injection.
+        /// Initializes a new instance of <see cref="InternalTaxRateClient"/> with dependency injection.
         /// </summary>
-        public InternalPersonalAccountClient(IOptions<AuthSettings> settings,
+        public InternalTaxRateClient(IOptions<AuthSettings> settings,
                                           IRequestContext requestContext,
                                           ILogger<InternalClientBase> logger,
                                           IConfiguration configuration)
@@ -27,14 +27,14 @@ namespace Simplic.OxS.Erp.InternalClient
         }
 
         /// <summary>
-        /// Gets a personal account by id.
+        /// Gets a tax rate by id.
         /// </summary>
-        /// <param name="id">The contact id.</param>
-        public async Task<PersonalAccountInternalModel?> Get(Guid id)
+        /// <param name="id">The cost center id.</param>
+        public async Task<TaxRateInternalModel?> Get(Guid id)
         {
             try
             {
-                return await Get<PersonalAccountInternalModel?>("erp", "InternalPersonalAccount", "get-by-id",
+                return await Get<TaxRateInternalModel?>("erp", "InternalTaxRateClient", "get-by-id",
                     new Dictionary<string, string>
                     {
                         { "id", $"{id}" }
@@ -42,7 +42,7 @@ namespace Simplic.OxS.Erp.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could not make internal personal account call InternalPersonalAccountClient.GetById", ex);
+                logger.LogError("Could not make internal tax rate call InternalTaxRateClient.GetById", ex);
                 throw;
             }
         }

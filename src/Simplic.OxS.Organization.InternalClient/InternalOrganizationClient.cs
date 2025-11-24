@@ -23,7 +23,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Could make internal organization call InternalOrganizationClient.GetForCurrentUser");
+                logger.LogError(ex, "Could not make internal organization call InternalOrganizationClient.GetForCurrentUser");
                 return new List<Model.OrganizationMemberModel>();
             }
         }
@@ -36,7 +36,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, $"Could make internal organization call InternalOrganizationClient.GetCurrent.");
+                logger.LogError(ex, $"Could not make internal organization call InternalOrganizationClient.GetCurrent.");
                 return null;
             }
         }

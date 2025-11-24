@@ -42,12 +42,12 @@ namespace Simplic.OxS.ConstructionSite.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Could make internal construction site call InternalConstructionSiteClient.GetById");
+                logger.LogError(ex, "Could not make internal construction site call InternalConstructionSiteClient.GetById");
 
                 var iex = ex;
                 while (iex.InnerException != null)
                 {
-                    logger.LogError(ex, "Could make internal construction call InternalConstructionSiteClient.GetById [InnerException]");
+                    logger.LogError(ex, "Could not make internal construction call InternalConstructionSiteClient.GetById [InnerException]");
                     iex = iex.InnerException;
                 }
                 throw;

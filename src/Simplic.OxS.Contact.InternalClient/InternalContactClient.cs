@@ -42,12 +42,12 @@ namespace Simplic.OxS.Contact.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError(ex,"Could make internal contact call InternalContactClient.GetById");
+                logger.LogError(ex,"Could not make internal contact call InternalContactClient.GetById");
 
                 var iex = ex;
                 while (iex.InnerException != null)
                 {
-                    logger.LogError(ex,"Could make internal contact call InternalContactClient.GetById [InnerException]");
+                    logger.LogError(ex,"Could not make internal contact call InternalContactClient.GetById [InnerException]");
                     iex = iex.InnerException;
                 }
                 throw;

@@ -29,7 +29,7 @@ namespace Simplic.OxS.Organization.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError($"Could make internal certificate call InternalCertificateClient.Get/{id}", ex);
+                logger.LogError($"Could not make internal certificate call InternalCertificateClient.Get/{id}", ex);
                 return null;
                 
             }

@@ -42,7 +42,7 @@ namespace Simplic.OxS.Article.InternalClient
             }
             catch (Exception ex)
             {
-                logger.LogError("Could make internal quantity unit call InternalQuantityUnitClient.GetById", ex);
+                logger.LogError("Could not make internal quantity unit call InternalQuantityUnitClient.GetById", ex);
                 throw;
             }
         }
