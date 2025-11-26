@@ -6,11 +6,11 @@ using Simplic.OxS.Settings;
 
 namespace Simplic.OxS.Accounting.InternalClient;
 
-public class InternalGeneralLedgerAccountClient : InternalClientBase
+public class InternalCostCenterClient : InternalClientBase
 {
     private readonly ILogger<InternalClientBase> logger;
 
-    public InternalGeneralLedgerAccountClient(
+    public InternalCostCenterClient(
             IOptions<AuthSettings> settings,
             IRequestContext requestContext,
             ILogger<InternalClientBase> logger,
@@ -21,15 +21,15 @@ public class InternalGeneralLedgerAccountClient : InternalClientBase
     }
 
     /// <summary>
-    /// Gets a vehicle by id.
+    /// Gets a costcenter by id.
     /// </summary>
-    /// <param name="id">Vehicle id</param>
+    /// <param name="id">costcenter id</param>
     /// <returns></returns>
-    public async Task<GeneralLedgerAccountInternalModel?> GetById(Guid id)
+    public async Task<CostCenterInternalModel?> GetById(Guid id)
     {
         try
         {
-            return await Get<GeneralLedgerAccountInternalModel?>("accounting", "InternalGeneralLedgerAccount", "get-by-id",
+            return await Get<CostCenterInternalModel?>("accounting", "InternalCostCenter", "get-by-id",
                 new Dictionary<string, string>
                 {
                     { "id", id.ToString() }
@@ -37,7 +37,7 @@ public class InternalGeneralLedgerAccountClient : InternalClientBase
         }
         catch (Exception ex)
         {
-            logger.LogError("Could not make internal accounting call InternalGeneralLedgerAccountClient.GetById", ex);
+            logger.LogError("Could not make internal accounting call InternalCostCenterClient.GetById", ex);
             throw;
         }
     }
