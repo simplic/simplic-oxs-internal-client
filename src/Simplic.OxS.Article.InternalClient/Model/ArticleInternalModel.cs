@@ -36,6 +36,11 @@
         public string Number { get; set; }
 
         /// <summary>
+        /// Gets or sets the corresponding tax rate by ID.
+        /// </summary>
+        public Guid? TaxRateId { get; set; }
+
+        /// <summary>
         /// Gets or sets the unique number.
         /// </summary>
         public int UniqueNumber { get; set; }
