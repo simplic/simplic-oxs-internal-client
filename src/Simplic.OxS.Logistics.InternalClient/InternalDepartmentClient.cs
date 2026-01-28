@@ -46,5 +46,7 @@ namespace Simplic.OxS.Logistics.InternalClient
                 throw;
             }
         }
+
+        public override string ApiVersion { get => "v2"; set => base.ApiVersion = value; }
     }
 }
