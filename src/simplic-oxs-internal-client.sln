@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.3.11426.168 d18.3
+VisualStudioVersion = 18.3.11426.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ENV", "ENV", "{523A9F07-8BBF-4A18-92C0-D7CD8642D353}"
 	ProjectSection(SolutionItems) = preProject
@@ -46,6 +46,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.OxS.Accounting.InternalClient", "Simplic.OxS.Accounting.InternalClient\Simplic.OxS.Accounting.InternalClient.csproj", "{01C186DA-A3E2-4E59-B0C1-7D95241E3BD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.OxS.Document.InternalClient.V2", "Simplic.OxS.Document.InternalClient.V2\Simplic.OxS.Document.InternalClient.V2.csproj", "{052401A7-05F3-4E5E-97B1-6D1FB76CBE30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simplic.OxS.Profile.InternalClient", "Simplic.OxS.Profile.InternalClient\Simplic.OxS.Profile.InternalClient.csproj", "{E1BC90D2-F98D-4981-A394-E4F2D56C91AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +127,10 @@ Global
 		{052401A7-05F3-4E5E-97B1-6D1FB76CBE30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{052401A7-05F3-4E5E-97B1-6D1FB76CBE30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{052401A7-05F3-4E5E-97B1-6D1FB76CBE30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BC90D2-F98D-4981-A394-E4F2D56C91AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BC90D2-F98D-4981-A394-E4F2D56C91AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BC90D2-F98D-4981-A394-E4F2D56C91AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BC90D2-F98D-4981-A394-E4F2D56C91AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
