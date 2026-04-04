@@ -26,14 +26,9 @@
         public string? FullName { get; set; }
 
         /// <summary>
-        /// Gets or sets the description.
-        /// </summary>
-        public string? Description { get; set; }
-
-        /// <summary>
         /// Gets or sets the number.
         /// </summary>
-        public string Number { get; set; }
+        public string? Number { get; set; }
 
         /// <summary>
         /// Gets or sets the corresponding tax rate by ID.
@@ -41,17 +36,12 @@
         public Guid? TaxRateId { get; set; }
 
         /// <summary>
-        /// Gets or sets the unique number.
-        /// </summary>
-        public int UniqueNumber { get; set; }
-
-        /// <summary>
         /// Gets or sets the ean.
         /// <para>
         /// EAN is short for european article number.
         /// </para>
         /// </summary>
-        public string EAN { get; set; }
+        public string? EAN { get; set; }
 
         /// <summary>
         /// Gets or sets the article group.
