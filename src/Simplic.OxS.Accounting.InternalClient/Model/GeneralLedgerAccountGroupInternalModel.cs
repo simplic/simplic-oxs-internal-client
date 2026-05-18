@@ -1,24 +1,19 @@
 ﻿namespace Simplic.OxS.Accounting.InternalClient;
 
 /// <summary>
-/// Represents the internal general ledger account model
+/// Represents the internal general ledger account group model
 /// </summary>
-public class GeneralLedgerAccountInternalModel
+public class GeneralLedgerAccountGroupInternalModel
 {
     /// <summary>
-    /// Gets or sets the account name.
+    /// Gets or sets the group name.
     /// </summary>
     public string Name { get; set; }
 
     /// <summary>
-    /// Gets or sets the account number.
+    /// Gets or sets the group number.
     /// </summary>
     public string Number { get; set; }
-
-    /// <summary>
-    /// Gets or sets the corresponding tax rate by ID.
-    /// </summary>
-    public Guid? TaxRateId { get; set; }
 
     /// <summary>
     /// Gets or sets the id.
@@ -26,7 +21,7 @@ public class GeneralLedgerAccountInternalModel
     public Guid Id { get; set; }
 
     /// <summary>
-    /// Gets or sets whether the account is deleted.
+    /// Gets or sets whether the group is deleted.
     /// </summary>
     public bool IsDeleted { get; set; }
 

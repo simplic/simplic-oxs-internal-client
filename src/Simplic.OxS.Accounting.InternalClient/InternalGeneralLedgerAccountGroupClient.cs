@@ -6,11 +6,11 @@ using Simplic.OxS.Settings;
 
 namespace Simplic.OxS.Accounting.InternalClient;
 
-public class InternalGeneralLedgerAccountClient : InternalClientBase
+public class InternalGeneralLedgerAccountGroupClient : InternalClientBase
 {
     private readonly ILogger<InternalClientBase> logger;
 
-    public InternalGeneralLedgerAccountClient(
+    public InternalGeneralLedgerAccountGroupClient(
             IOptions<AuthSettings> settings,
             IRequestContext requestContext,
             ILogger<InternalClientBase> logger,
@@ -21,15 +21,15 @@ public class InternalGeneralLedgerAccountClient : InternalClientBase
     }
 
     /// <summary>
-    /// Gets a general ledger account by id.
+    /// Gets a general ledger account group by id.
     /// </summary>
-    /// <param name="id">General ledger account id</param>
+    /// <param name="id">General ledger account group id</param>
     /// <returns></returns>
-    public async Task<GeneralLedgerAccountInternalModel?> GetById(Guid id)
+    public async Task<GeneralLedgerAccountGroupInternalModel?> GetById(Guid id)
     {
         try
         {
-            return await Get<GeneralLedgerAccountInternalModel?>("accounting", "InternalGeneralLedgerAccount", "get-by-id",
+            return await Get<GeneralLedgerAccountGroupInternalModel?>("accounting", "InternalGeneralLedgerAccountGroup", "get-by-id",
                 new Dictionary<string, string>
                 {
                     { "id", id.ToString() }
@@ -37,7 +37,7 @@ public class InternalGeneralLedgerAccountClient : InternalClientBase
         }
         catch (Exception ex)
         {
-            logger.LogError("Could not make internal general ledger account call InternalGeneralLedgerAccountClient.GetById", ex);
+            logger.LogError("Could not make internal general ledger account group call InternalGeneralLedgerAccountGroupClient.GetById", ex);
             throw;
         }
     }
