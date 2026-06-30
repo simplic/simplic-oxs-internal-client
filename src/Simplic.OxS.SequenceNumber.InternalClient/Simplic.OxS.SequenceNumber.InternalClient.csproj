@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
-    <Version>1.2.325.1017</Version>
+    <Version>1.3.26.630</Version>
   </PropertyGroup>
 
   <ItemGroup>
