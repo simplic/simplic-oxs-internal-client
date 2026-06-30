@@ -2,16 +2,16 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Simplic.OxS.InternalClient;
-using Simplic.OxS.SequenceNumber.InternalClient.Model;
+using Simplic.OxS.Reporting.InternalClient.Model;
 using Simplic.OxS.Settings;
 
-namespace Simplic.OxS.SequenceNumber.InternalClient
+namespace Simplic.OxS.Reporting.InternalClient
 {
-    public class InternalSequenceNumberClient : InternalClientBase
+    public class InternalReportingClient : InternalClientBase
     {
         private readonly ILogger logger;
 
-        public InternalSequenceNumberClient(
+        public InternalReportingClient(
                 IOptions<AuthSettings> settings,
                 IRequestContext requestContext,
                 ILogger<InternalClientBase> logger,
@@ -22,18 +22,18 @@ namespace Simplic.OxS.SequenceNumber.InternalClient
         }
 
         /// <summary>
-        /// Creates a sequence number
+        /// Renders a report
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public async Task<SequenceNumberResultInternalModel?> CreateSequenceNumber(GenerateSequenceNumberInternalRequest request)
+        public async Task<RenderReportInternalResponse?> RenderReport(RenderReportInternalRequest request)
         {
             try
             {
-                return await Post<SequenceNumberResultInternalModel, GenerateSequenceNumberInternalRequest>(
-                    "sequence-number",
-                    "InternalSequenceNumber",
-                    "generate",
+                return await Post<RenderReportInternalResponse, RenderReportInternalRequest>(
+                    "reporting",
+                    "InternalRendering",
+                    "render",
                     request);
             }
             catch (InternalClientException ex)
