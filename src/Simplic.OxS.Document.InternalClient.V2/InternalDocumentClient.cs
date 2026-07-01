@@ -60,4 +60,31 @@ public class InternalDocumentClient : InternalClientBase
             throw;
         }
     }
+
+    /// <summary>
+    /// Creates a document.
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    public async Task<DocumentResponse?> Create(CreateDocumentInternalRequest request)
+    {
+        try
+        {
+            return await Post<DocumentResponse, CreateDocumentInternalRequest>(
+                "document",
+                "InternalDocument",
+                "create",
+                request);
+        }
+        catch (InternalClientException ex)
+        {
+            logger.LogError("Internal call failed with status code {statusCode} and message {message}", ex.Result.StatusCode, ex.Message);
+            throw;
+        }
+        catch (Exception ex)
+        {
+            logger.LogError("Internal call failed {ex}", ex);
+            throw;
+        }
+    }
 }
