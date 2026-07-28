@@ -46,5 +46,26 @@ namespace Simplic.OxS.Erp.InternalClient
                 throw;
             }
         }
+
+        /// <summary>
+        /// Gets a tax rate by code.
+        /// </summary>
+        /// <param name="code">The tax rate code.</param>
+        public async Task<TaxRateInternalModel?> GetByCode(string code)
+        {
+            try
+            {
+                return await Get<TaxRateInternalModel?>("erp", "InternalTaxRate", "get-by-code",
+                    new Dictionary<string, string>
+                    {
+                        { "code", $"{code}" }
+                    });
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Could not make internal tax rate call InternalTaxRateClient.GetByCode", ex);
+                throw;
+            }
+        }
     }
 }

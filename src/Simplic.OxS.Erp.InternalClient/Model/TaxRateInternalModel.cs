@@ -31,6 +31,12 @@
         public string Name { get; set; }
 
         /// <summary>
+        /// Gets or sets a code.
+        /// This code is to be used by internal processes.
+        /// </summary>
+        public string? Code { get; set; }
+
+        /// <summary>
         /// Gets or sets the date and time the tax rate is created.
         /// </summary>
         public DateTime CreateDateTime { get; set; }
