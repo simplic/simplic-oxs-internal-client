@@ -134,7 +134,7 @@ public class InternalDocumentClient : InternalClientBase
             await Delete<DocumentResponse>(
                 "document",
                 "InternalDocument",
-                "remove-path-internal-client",
+                "remove-path",
                 new Dictionary<string, string>
                 {
                     { "documentId", documentId.ToString() },
