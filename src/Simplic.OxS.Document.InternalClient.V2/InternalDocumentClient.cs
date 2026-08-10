@@ -127,11 +127,11 @@ public class InternalDocumentClient : InternalClientBase
     /// <param name="documentId">Document id</param>
     /// <param name="targetId">Target id of the path to remove</param>
     /// <returns></returns>
-    public async Task RemovePath(Guid documentId, Guid targetId)
+    public async Task<DocumentResponse?> RemovePath(Guid documentId, Guid targetId)
     {
         try
         {
-            await Delete<DocumentResponse>(
+            return await Delete<DocumentResponse>(
                 "document",
                 "InternalDocument",
                 "remove-path",
