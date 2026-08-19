@@ -47,5 +47,32 @@ namespace Simplic.OxS.Reporting.InternalClient
                 throw;
             }
         }
+
+        /// <summary>
+        /// Renders a report
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public async Task<RenderAndUploadReportResponse?> RenderAndUploadReport(RenderAndUploadReportRequest request)
+        {
+            try
+            {
+                return await Post<RenderAndUploadReportResponse, RenderAndUploadReportRequest>(
+                    "reporting",
+                    "InternalRendering",
+                    "render-and-upload",
+                    request);
+            }
+            catch (InternalClientException ex)
+            {
+                logger.LogError("Internal call failed with status code {statusCode} and message {message}", ex.Result.StatusCode, ex.Message);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Internal call failed {ex}", ex);
+                throw;
+            }
+        }
     }
 }
