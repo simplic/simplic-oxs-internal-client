@@ -41,6 +41,11 @@
         public Guid? TaxRateId { get; set; }
 
         /// <summary>
+        /// Gets or sets the tax rate.
+        /// </summary>
+        public TaxRateSubsetInternalModel TaxRate { get; set; }
+
+        /// <summary>
         /// Gets or sets the unique number.
         /// </summary>
         public int UniqueNumber { get; set; }
