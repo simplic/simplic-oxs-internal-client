@@ -43,7 +43,7 @@
         /// <summary>
         /// Gets or sets the tax rate.
         /// </summary>
-        public TaxRateSubsetInternalModel TaxRate { get; set; }
+        public TaxRateSubsetInternalModel? TaxRate { get; set; }
 
         /// <summary>
         /// Gets or sets the unique number.
