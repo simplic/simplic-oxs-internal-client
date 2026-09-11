@@ -28,7 +28,7 @@
         /// <summary>
         /// Gets or sets the amount of Children.
         /// </summary>
-        public double? Children { get; set; }
+        public IList<ChildInternalModel> Children { get; set; } = new List<ChildInternalModel>();
 
         /// <summary>
         /// Gets or sets the Citizenship.
