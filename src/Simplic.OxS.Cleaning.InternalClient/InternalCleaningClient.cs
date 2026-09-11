@@ -26,6 +26,12 @@ namespace Simplic.OxS.Cleaning.InternalClient
         }
 
         /// <summary>
+        /// Gets the api version. The cleaning api only exists as v2 — the v1 default of the
+        /// base client resolves to a route no service answers (503/404).
+        /// </summary>
+        public override string ApiVersion => "v2";
+
+        /// <summary>
         /// Gets a cleaning by id.
         /// </summary>
         /// <param name="id">The cleaning id.</param>

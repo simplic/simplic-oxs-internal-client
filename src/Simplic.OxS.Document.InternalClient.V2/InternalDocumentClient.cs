@@ -1,9 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Simplic.OxS.Document.InternalClient.V2.Model;
 using Simplic.OxS.InternalClient;
 using Simplic.OxS.Settings;
-using Simplic.OxS.Document.InternalClient.V2.Model;
+using System.ComponentModel.DataAnnotations;
 
 namespace Simplic.OxS.Document.InternalClient.V2;
 
@@ -75,6 +76,70 @@ public class InternalDocumentClient : InternalClientBase
                 "InternalDocument",
                 "create",
                 request);
+        }
+        catch (InternalClientException ex)
+        {
+            logger.LogError("Internal call failed with status code {statusCode} and message {message}", ex.Result.StatusCode, ex.Message);
+            throw;
+        }
+        catch (Exception ex)
+        {
+            logger.LogError("Internal call failed {ex}", ex);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Adds a path to a document.
+    /// </summary>
+    /// <param name="documentId">Document id</param>
+    /// <param name="request">Request containing the path to add</param>
+    /// <returns></returns>
+    public async Task<DocumentResponse?> AddPath(Guid documentId, AddDocumentPathRequest request)
+    {
+        try
+        {
+            return await Put<DocumentResponse, AddDocumentPathRequest>(
+                "document",
+                "InternalDocument",
+                "add-path",
+                request,
+                new Dictionary<string, string>
+                {
+                    { "documentId", documentId.ToString() }
+                });
+        }
+        catch (InternalClientException ex)
+        {
+            logger.LogError("Internal call failed with status code {statusCode} and message {message}", ex.Result.StatusCode, ex.Message);
+            throw;
+        }
+        catch (Exception ex)
+        {
+            logger.LogError("Internal call failed {ex}", ex);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Removes a path from a document.
+    /// </summary>
+    /// <param name="documentId">Document id</param>
+    /// <param name="targetId">Target id of the path to remove</param>
+    /// <returns></returns>
+    public async Task<DocumentResponse?> RemovePath(Guid documentId, Guid targetId)
+    {
+        try
+        {
+            return await Delete<DocumentResponse>(
+                "document",
+                "InternalDocument",
+                "remove-path",
+                new Dictionary<string, string>
+                {
+                    { "documentId", documentId.ToString() },
+                    { "targetId", targetId.ToString() }
+                });
         }
         catch (InternalClientException ex)
         {

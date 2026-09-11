@@ -4,11 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.1.525.1124</Version>
+    <Version>1.1.726.825</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.2.124.305" />
+    <PackageReference Include="Simplic.OxS.InternalClient" Version="1.2.325.401" />
   </ItemGroup>
 
 </Project>
