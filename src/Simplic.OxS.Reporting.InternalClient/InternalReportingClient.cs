@@ -74,5 +74,33 @@ namespace Simplic.OxS.Reporting.InternalClient
                 throw;
             }
         }
+
+        /// <summary>
+        /// Gets a report document by id.
+        /// </summary>
+        /// <param name="id">Report document id</param>
+        /// <param name="omitBytes">If <c>true</c>, the report's bytes are omitted from the response.</param>
+        /// <returns>The report document, or <c>null</c> if not found.</returns>
+        public async Task<ReportDocumentModel?> GetReport(Guid id, bool omitBytes = false)
+        {
+            try
+            {
+                return await Get<ReportDocumentModel?>("reporting", "InternalReport", $"{id}",
+                    new Dictionary<string, string>
+                    {
+                        { "omitBytes", $"{omitBytes}" }
+                    });
+            }
+            catch (InternalClientException ex)
+            {
+                logger.LogError("Internal call failed with status code {statusCode} and message {message}", ex.Result.StatusCode, ex.Message);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Internal call failed {ex}", ex);
+                throw;
+            }
+        }
     }
 }
