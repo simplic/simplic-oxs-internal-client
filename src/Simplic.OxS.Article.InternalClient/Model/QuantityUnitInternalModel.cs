@@ -34,6 +34,11 @@
         public string ShortName { get; set; }
 
         /// <summary>
+        /// Gets or sets the quantity code.
+        /// </summary>
+        public string? Code { get; set; }
+
+        /// <summary>
         /// Gets or sets the defualt decimal digits of the quantity.
         /// </summary>
         public int Digits { get; set; }
