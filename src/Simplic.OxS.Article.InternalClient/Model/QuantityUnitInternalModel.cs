@@ -44,6 +44,11 @@
         public int Digits { get; set; }
 
         /// <summary>
+        /// Gets or sets whether the quantity unit is active.
+        /// </summary>
+        public bool? IsActive { get; set; }
+
+        /// <summary>
         /// Gets or sets the create date time of the quanitity unit.
         /// </summary>
         public DateTime CreateDateTime { get; set; }
